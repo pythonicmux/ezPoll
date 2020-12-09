@@ -20,12 +20,14 @@
 GTEST_DIR=~/googletest/googletest
 
 # Where to find user code.
+INC_DIR = ./include
+SRC_DIR = ./src
 TEST_DIR=./tests
 
 # Flags passed to the preprocessor.
 # Set Google Test's header directory as a system directory, such that
 # the compiler doesn't generate warnings in Google Test headers.
-CPPFLAGS += -I $(GTEST_DIR)
+CPPFLAGS += -I $(GTEST_DIR) -I $(INC_DIR) -I $(SRC_DIR)
 
 # Flags passed to the C++ compiler.
 CXXFLAGS += -g -Wall -Wextra -pthread --std=c++17
