@@ -1,13 +1,23 @@
 # ezPoll
-An epoll wrapper that is elegant and easy-to-use.
+An epoll wrapper that is elegant and easy-to-use. Note that this only works on Linux because epoll is a Linux kernel data structure.
 
 ## Setup/Testing
 
-First, install googletest if you haven't already. 
+Install googletest onto your system if you want to run the library tests. This involves downloading the source files and manually installing them:
 
-In the Makefile, on line 20, change the GTEST_DIR variable to 
-the location of your googletest root directory, i.e. if your googletest 
-repo is cloned in the folder ~/A, then your path would be ~/A/googletest since 
-this is the root folder of the source code.
+To download the source:
+```
+sudo apt-get install libgtest-dev
+```
 
-Run ./test.sh to make the tests and run them.
+To install the library:
+```
+cd /usr/src/gtest
+sudo mkdir build
+cd build
+sudo cmake ..
+sudo make
+sudo make install
+```
+
+Now, running `test.sh` should run all library tests!

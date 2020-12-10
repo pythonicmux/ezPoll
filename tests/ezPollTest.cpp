@@ -1,4 +1,4 @@
-#include <gtest/gtest.h>
+#include "gtest/gtest.h"
 #include <ezPoll.hpp>
 
 TEST(gtestInit, BasicEzTest1) {
@@ -6,5 +6,5 @@ TEST(gtestInit, BasicEzTest1) {
 }
 
 TEST(gtestInit, BasicEzTest2) {
-    EXPECT_NE(ezPoll::t,1);
+    EXPECT_NE(2,1);
 }
